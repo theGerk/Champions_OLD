@@ -25,18 +25,16 @@ namespace Champions
 {
 	public static class General
 	{
-		public static BigInteger getPointsFromValue(BigInteger value, uint costPerPoint, int positiveModifier, int negitiveModifier, BigInteger baseValue, BigInteger maxima)
+		public static BigInteger getPointsFromValue(BigInteger value, uint costPerPoint, int positiveModifier, int negitiveModifier, BigInteger baseValue, BigInteger BaseActivePoints, BigInteger maxima)
 		{
-			return value * (positiveModifier + 1) / (negitiveModifier + 1)
+			return 0;
 		}
 
-		public static BigInteger getValueFromPoints(BigInteger points, uint costPerPoint, int positiveModifier, int negitiveModifier, BigInteger baseValue, BigInteger maxima)
+		public static BigInteger getValueFromCost(BigInteger points, uint costPerPoint, int positiveModifier, int negitiveModifier, BigInteger baseValue, BigInteger BaseActivePoints, BigInteger maxima)
 		{
-			var activeCost = points * (negitiveModifier + 1) + baseValue;
-			if(activeCost > maxima)
-			{
-				maxima 
-			}
+			return 0;
 		}
+
+		public getActivePointsFromCost()
 	}
 }
