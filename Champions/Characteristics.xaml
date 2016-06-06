@@ -23,12 +23,6 @@
 			<RowDefinition></RowDefinition>
 			<RowDefinition></RowDefinition>
 		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition></ColumnDefinition>
-			<ColumnDefinition></ColumnDefinition>
-			<ColumnDefinition></ColumnDefinition>
-			<ColumnDefinition></ColumnDefinition>
-			<ColumnDefinition></ColumnDefinition>
-		</Grid.ColumnDefinitions>
+		<local:Characteristic CharacteristicName="STR"></local:Characteristic>
 	</Grid>
 </UserControl>

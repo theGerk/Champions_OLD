@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace Standard
 {
@@ -16,6 +17,26 @@ namespace Standard
 		public static bool isDigitOnly(char input)
 		{
 			return char.IsDigit(input);
+		}
+	}
+}
+
+namespace Champions
+{
+	public static class General
+	{
+		public static BigInteger getPointsFromValue(BigInteger value, uint costPerPoint, int positiveModifier, int negitiveModifier, BigInteger baseValue, BigInteger maxima)
+		{
+			return value * (positiveModifier + 1) / (negitiveModifier + 1)
+		}
+
+		public static BigInteger getValueFromPoints(BigInteger points, uint costPerPoint, int positiveModifier, int negitiveModifier, BigInteger baseValue, BigInteger maxima)
+		{
+			var activeCost = points * (negitiveModifier + 1) + baseValue;
+			if(activeCost > maxima)
+			{
+				maxima 
+			}
 		}
 	}
 }

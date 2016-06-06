@@ -14,10 +14,10 @@
 			<ColumnDefinition x:Name="BaseColumn"></ColumnDefinition>
 			<ColumnDefinition x:Name="PtsColumn"></ColumnDefinition>
 		</Grid.ColumnDefinitions>
-		<TextBox Grid.Column="0" x:Name="Value" KeyDown="Value_KeyDown" LostFocus="Value_LostFocus" TextInput="Value_TextInput"></TextBox>
-		<TextBlock Grid.Column="1" x:Name="Chacteristics"></TextBlock>
+		<TextBox Grid.Column="0" x:Name="Value" PreviewTextInput="LimitToNumbers" LostFocus="Value_Set"></TextBox>
+		<TextBlock Grid.Column="1" x:Name="Chacteristics" Text="{Binding Path=CharacteristicName}"></TextBlock>
 		<TextBlock Grid.Column="2" x:Name="Cost"></TextBlock>
 		<TextBlock Grid.Column="3" x:Name="Base"></TextBlock>
-		<TextBox Grid.Column="4" x:Name="Pts"></TextBox>
+		<TextBox Grid.Column="4" x:Name="Pts" PreviewTextInput="LimitToNumbers" LostFocus="Pts_Set"></TextBox>
 	</Grid>
 </UserControl>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Numerics;
 
 namespace Champions
 {
@@ -20,29 +21,50 @@ namespace Champions
 	/// </summary>
 	public partial class Characteristic : UserControl
 	{
+		//Constructor
 		public Characteristic()
 		{
 			InitializeComponent();
+			DataContext = this;
 		}
 
-		int lf, kd, ti;
 
-		private void Value_LostFocus(object sender, RoutedEventArgs e)
+		//WPF Properties
+		public string CharacteristicName
 		{
-			lf++;
-			Chacteristics.Text = lf.ToString();
+			get { return (string)GetValue(CharacteristicName_Property); }
+			set { SetValue(CharacteristicName_Property, value); }
+		}
+		public static readonly DependencyProperty CharacteristicName_Property = DependencyProperty.Register("MyProperty", typeof(string), typeof(Characteristic), new PropertyMetadata(""));
+
+		public uint CostMultiplier
+		{
+			get { return (ushort)GetValue(MyPropertyProperty); }
+			set { SetValue(MyPropertyProperty, value); }
+		}
+		public static readonly DependencyProperty CostMultiplier_Property = DependencyProperty.Register("CostMultiplier", typeof(uint), typeof(Characteristic), new PropertyMetadata(0));
+
+
+
+		//external event handlers
+		public event EventHandler<int> Update;
+
+
+		// Internal event handlers
+		private void LimitToNumbers(object sender, TextCompositionEventArgs e)
+		{
+			int dumpInt;
+			e.Handled = !Standard.General.isDigitOnly(e.Text) || (((TextBox)sender).Text.Length == 0 && int.TryParse(e.Text, out dumpInt));
 		}
 
-		private void Value_KeyDown(object sender, KeyEventArgs e)
+		private void Value_Set(object sender, RoutedEventArgs e)
 		{
-			kd++;
-			Cost.Text = kd.ToString();
+			Pts.Text =
 		}
 
-		private void Value_TextInput(object sender, TextCompositionEventArgs e)
+		private void Pts_Set(object sender, RoutedEventArgs e)
 		{
-			ti++;
-			Base.Text = ti.ToString();
+
 		}
 	}
 }
