@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
+using Champions.Modifier;
 
 namespace Champions
 {
-	public class Character
+	public class Character : ChampionsBaseClass
 	{
 		public BigInteger BasePoints { get; set; }
 
@@ -17,15 +18,18 @@ namespace Champions
 
 		public List<ExternalPointAllocator> PointsSpentExternally { get; set; }
 
-		public Characteristics[] Characteristics { get; set; }
+		public Characteristics Characteristics { get; set; }
+
+		public List<Disadvantage> Disadvantages { get; set; }
 	}
+
+
 
 	public struct Characteristics
 	{
-		IncreaseablePower
 	}
 
-	public class ExternalPointAllocator
+	public class ExternalPointAllocator : ChampionsBaseClass
 	{
 		public ExternalPointAllocator(string whatTo)
 		{ WhatTo = whatTo; }
@@ -37,44 +41,16 @@ namespace Champions
 		public string WhatTo { get; set; }
 	}
 	
-	abstract public class PowerBase
+	abstract public class PowerBase : ChampionsBaseClass
 	{
 		public string Name { get; set; }
 
 		public string Explanation { get; set; }
 
-		public abstract int RealCost { get; }
+		public abstract int RealCost { get; set; }
 
 		public List<Advantage> Advantages { get; set; }
 
-		public List<> Limitations { get; set; }
-	}
-
-	public struct Advantage
-	{
-		public enum Name {
-			AffectsDesolidified,
-			AreaEffect,
-
-		}
-
-		public string Description { get; set; }
-
-		public string Explanation { get; set; }
-	}
-
-	public class IncreaseablePower : PowerBase
-	{
-
-	}
-
-	public class SettablePower : PowerBase
-	{
-
-	}
-
-	public struct PowerSetting
-	{
-		string Description
+		public List<Limitation> Limitations { get; set; }
 	}
 }
