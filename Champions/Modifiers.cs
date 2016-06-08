@@ -22,8 +22,5 @@ namespace Champions
 
 		abstract public class Limitation : Modifier
 		{ }
-
-
-
 	}
 }

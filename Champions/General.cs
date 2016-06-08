@@ -34,7 +34,5 @@ namespace Champions
 		{
 			return 0;
 		}
-
-		public getActivePointsFromCost()
 	}
 }
