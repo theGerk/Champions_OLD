@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 namespace Champions
 {
 	//work in progress
-	class PointAllocation
+	public class PointAllocation : ChampionsBaseClass
 	{
-		public bool finite;
-
-		public string name;
-		public uint amount;
+		public int Cost { get; }
 	}
 }

@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Champions
 {
-	public abstract class Disadvantage : ChampionsBaseClass
+	public class Disadvantage : ChampionsBaseClass
 	{
-		public abstract int Points { get; }
+		public int Points
+        {
+            get
+			{
+				return Attributes.Sum(a => a.Cost * a.TimesBought);
+            }
+        }
+
+		public PointAllocation[] Attributes { get; }
 	}
 }
