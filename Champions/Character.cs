@@ -49,8 +49,8 @@ namespace Champions
 
 		public abstract int RealCost { get; set; }
 
-		public List<Advantage> Advantages { get; set; }
+		public List<Advantage> Advantages;
 
-		public List<Limitation> Limitations { get; set; }
+		public List<Limitation> Limitations;
 	}
 }

@@ -16,5 +16,11 @@ namespace Champions
 
 			abstract public decimal Amount { get; }
 		}
+
+		abstract public class Advantage : Modifier
+		{ }
+
+		abstract public class Limitation : Modifier
+		{ }
 	}
 }

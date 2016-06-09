@@ -69,6 +69,7 @@
     <Compile Include="ChampionsBase.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Disadvantages.cs" />
+    <Compile Include="FrameWork.cs" />
     <Compile Include="General.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

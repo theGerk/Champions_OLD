@@ -8,14 +8,6 @@ namespace Champions
 {
 	public class Disadvantage : ChampionsBaseClass
 	{
-		public int Points
-        {
-            get
-			{
-				return Attributes.Sum(a => a.Cost * a.TimesBought);
-            }
-        }
-
 		public PointAllocation[] Attributes { get; }
 	}
 }
