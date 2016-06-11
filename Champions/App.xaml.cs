@@ -13,5 +13,6 @@ namespace Champions
 	/// </summary>
 	public partial class App : Application
 	{
+
 	}
 }

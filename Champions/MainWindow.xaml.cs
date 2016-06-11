@@ -22,6 +22,7 @@ namespace Champions
 	{
 		public MainWindow()
 		{
+			var RuleSet = Newtonsoft.Json.JsonConvert.DeserializeObject<Framework.Rules>(System.IO.File.ReadAllText("Rules.json"));
 			InitializeComponent();
 		}
 	}

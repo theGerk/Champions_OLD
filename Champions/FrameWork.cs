@@ -5,12 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Champions
-{
+{ 
 	/// <summary>
 	/// This is for anything to describe the rules of the book.
 	/// </summary>
 	namespace Framework
 	{
+		/// <summary>
+		/// Class containing a rule set for the game
+		/// </summary>
+		public class Rules
+		{
+			public IList<Component> Skills { get; set; }
+			public IList<Component> Perks { get; set; }
+			public IList<Component> Talents { get; set; }
+			public IList<Component> Powers { get; set; }
+			public IList<Framework> FrameWorks { get; set; }
+		}
+
 		/// <summary>
 		/// The Base for all framework types
 		/// </summary>
@@ -19,28 +31,38 @@ namespace Champions
 			/// <summary>
 			/// The name of the power, modifier, part of a power or so on...
 			/// </summary>
-			public string Name { get; }
+			public string Name { get; set; }
 
 			/// <summary>
 			/// The explanation for what this does
 			/// </summary>
-			public string Explanation { get; }
+			public string Explanation { get; set; }
 		}
 
 		/// <summary>
-		/// The base for any power, talent, disad, and so on
+		/// Class for powers, disads, skills and so on
 		/// </summary>
 		public class Component:FrameworkBase
 		{
 			/// <summary>
-			/// the Base cost for anything (for example Public ID ony has a base cost of 10, and nothing else
+			/// the Base cost for anything (for example Public ID ony has a base cost of 10, and nothing else)
 			/// </summary>
-			public int BaseCost { get; }
+			public int BaseCost { get; set; }
 
 			/// <summary>
 			/// All options on what can be bought under this
 			/// </summary>
-			public Option[] Options { get; }
+			public IList<Option> Options { get; set; }
+		}
+
+		/// <summary>
+		/// Class for power frameworks
+		/// </summary>
+		public class Framework:Component
+		{
+			public enum FrameworkTypes { ElementalControl, Multipower, VariablePowerPool }
+
+			public FrameworkTypes Type;
 		}
 
 		/// <summary>
@@ -58,13 +80,13 @@ namespace Champions
 			/// <summary>
 			/// The type of this option
 			/// </summary>
-			public OptionType Type { get; }
+			public OptionType Type { get; set; }
 
 
 			/// <summary>
 			/// How the points can be allocated, if this is incremental then it will be 1 length array
 			/// </summary>
-			public PointAllocation[] PointAlloc { get; }
+			public IList<PointAllocation> PointAlloc { get; set; }
 		}
 
 		/// <summary>
@@ -76,15 +98,17 @@ namespace Champions
 			/// <summary>
 			/// The cost of one level or the overall cost if it's a pure setting
 			/// </summary>
-			public decimal Cost { get; }
+			public decimal Cost { get; set; }
 
 			/// <summary>
 			/// If we multiply the cost by this or add it in (watched has a x 0.5 cost that is multiplicative)
 			/// Multiplicative costs are allways applied last.
 			/// </summary>
-			public CostType CostApplication { get; }
+			public CostType CostApplication { get; set; }
 
-
+			/// <summary>
+			/// an enum for how the cost is applied
+			/// </summary>
 			public enum CostType { Multiplicitive, Additive };
 		}
 	}
