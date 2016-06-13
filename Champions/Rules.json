@@ -1,0 +1,44 @@
+﻿{
+	"Skills": [
+		{
+			"Name": "Acrobatics",
+			"Explanation": "\tThis DEX-based Skill allows a character to perform flips, jumps, and rolls like a circus acrobat. Acrobatics allows the character to jump and flip over an obstacle, landing on his feet and ready to fight. Acrobatics can enable the character to jump off moving vehicles, swing from flagpoles, bounce off awnings, and execute other tricky moves.\n\tAcrobatics not only impresses any bystanders, but can be a useful trick in combat. An acrobat can often gain from +1 to +3 to his OCV by surprising his opponent (this bonus is determined by the GM; see the Surprise rules in the Fighting section).\n\tAcrobatics also enables the character to retain his balancein tricky conditions, like slippery floors, ice, or even on a tightrope. The GM should assign modifiers according to the difficulty of the situation. The character can also perform easy feats of balance (like walking on a balance beam) with no chance of falling.",
+			"Type": 4
+		},
+		{
+			"Name": "Acting",
+			"Explanation": "\tActing enables a character to alter his physical mannerisms and speech patterns in order to seem like someone else. A character with this skill can also fake moods and emotions. This PRE-based Skill can be used to hide the character’s true identity or to impersonate another individual. To detect a character who is acting, use Acting versus an INT Roll as Skill vs. Skill. It is more difficult to impersonate someone specific (-1 to -3), as is maintaining an impersonation over a long time (-1 to -3). The character can receive bonuses (+1 to +3) if he has had a chance to study the individual or if the individual is not well known to the viewers.\n\tActing does not impart any skill with disguises; if the character wants to impersonate someone specific, he will have to either have Disguise Skill or go to someone who does. Area Knowledge, Mimicry, and Disguise can all be complementary to an Acting Roll, depending on the circumstances. Failing an Acting Roll means that the Acting was not convincing, and that the viewers saw through the impersonation.",
+			"Type": 5
+		},
+		{
+			"Name": "Animal Handler",
+			"Explanation": "\tThis General Skill lets characters train animals to do their bidding. The handler is adept at managing all animals that he is knowledgeable about. The chance to successfully train an animal is based on the handler’s Skill Roll. This chance should be modified by the length of time that the handler has to work with the beast, the animal’s intelligence, and the handler’s familiarity with the species. Moreover, the temperament of the animal makes a difference — it is much easier to train a beagle than a camel or griffon. Training usually takes weeks, but a skillful Animal Handler can do it much more quickly.\n\tCharacters should make a Animal Handler Roll whenever they want the animal to do something unusual or out of the ordinary. For example, a trained attack dog could attack an enemy in combat without a roll. However, if the handler wants the dog to attack one man out of a crowd, a Handling Roll is required (with a penalty if the crowd is big and confusing). A failed roll means that the dog is too confused to attack at all, or attacks the wrong person.\n\tIt is not necessary to use this Skill with animals bought with Character Points (as followers); such creatures are assumed to be automatically friendly to the character. The cost of obtaining such animals is covered in the Perks section.",
+			"Type": 2
+		},
+		{
+			"Name": "Breakfall",
+			"Explanation": "\tThis DEX-based Skill allows a character to roll out from a fall and stand up without wasting a half Phase (see the Action Phase Table). The character may take half damage from the fall with a successful roll. Each +2\" of height is a -1 to the Breakfall Roll. If the Breakfall Roll is made by one-half (after applying the height modifier), the character takes no damage at all. The damage done from falls can be found in the section on Falling.\n\tBreakfall also enables a character to land on his feet after being Knocked Back or Knocked Down. If a character makes a successful roll, he does not take any damage and does not need to spend a half Phase standing up. Each +2\" of Knockback is a -1 to the Breakfall Roll. Characters who are Knocked Back into something (like a wall or the ground) may not use Breakfall to lessen the effects of Knockback.\n\tModifiers of -1 to -3 to the Breakfall Roll should be assigned if the character is wounded, carrying something or someone, or landing on an uneven, slippery surface. Landing on a soft surface would make the roll easier (+1 to +3).",
+			"Type": 4
+		},
+		{
+			"Name": "Bribery",
+			"Explanation": "\tA character with this PRE-based Skill knows when to bribe someone, how to approach him, and how much to offer. The proper bribe can vary greatly from place to place; usually it’s money, but sometimes such things as nylons or cigarettes are best. The bribery attempt should be roleplayed as much as possible, with the GM allowing a character to make Bribery Rolls at crucial points in the bargaining to help determine how much to offer, how subtle to be, and so on.\n\tIf the Bribery attempt is failed badly, or if the character attempts to bribe someone he shouldn’t have bribed, the target of the bribery may call his superior, the police, or even pull a gun. Also, just because someone has been successfully bribed doesn’t mean he’ll stay that way. Complementary Skills can include Persuasion, Seduction, and Area Knowledge. The right language also helps immensely.",
+			"Type": 5
+		},
+		{
+			"Name": "Bugging",
+			"Explanation": "\tThis INT-based Skill is the ability to properly implant and operate listening, visual, or other sensing devices (“bugs”). With a successful roll, the character has properly placed microphones or cameras and will get a good sound or video reception from the area. (This doesn’t necessarily mean that the bug is well-hidden — this would require a Concealment Roll). Characters with Bugging Skill may also “sweep” for bugs, searching physically or with detectors.\n\tCharacter’s with Bugging know how to listen or watch from a distance with parabolic mikes, telescopes, laser microphones, and other such devices. They can follow a properly bugged vehicle with a successful Bugging Roll and a tracking device. Unsuccessful Bugging Rolls can mean the wrong bug was used for the job, the equipment was broken, bad sound, false noises, etc.",
+			"Type": 3
+		},
+		{
+			"Name": "Bureaucratics",
+			"Explanation": "\tThe character knows how to deal with bureaucrats, cut through red tape, who to talk to, how to reach them, and how to extract information from bureaucracies. This PRE-based Skill comes in handy when the characters need travel papers while in a foreign country, are going through Customs, arranging for appointments, or similar activities.\n\tThese procedures usually take time, from several hours to several days. The character can get quicker action with a better Bureaucratics Roll. Some of the complementary Skills to Bureaucratics are Knowledge of the locale or culture, Seduction, Bribery, or Persuasion. If the character is dealing with a technical request of some sort, then the relevant Science would be complementary. Unsuccessful Bureaucratics Rolls can result in the character’s request being turned down, or worse, stalled forever in red tape.",
+			"Type": 5
+		},
+		{
+			"Name": "Climbing",
+			"Explanation": "\tThis DEX-based Skill allows the character to climb unusually difficult walls, trees, and buildings, as long as there are handholds. Most characters can climb ordinary things (like ladders) without making a roll. A character with Climbing may successfully climb a difficult surface with a successful Skill Roll. The GM may allow the character to make a STR Roll as a complementary Skill Roll. The climbing speed varies according to the structure being climbed, but the base speed is 1\" (2 meters) per Phase.\n\tA climbing character’s OCV and DCV are reduced by half, and may be 0 if the character is in a really difficult position. An unsuccessful Climbing Roll usually means that the character cannot climb that area, but it can sometimes means a fall if the roll was spectacularly bad",
+			"Type": 4
+		}
+	]
+}

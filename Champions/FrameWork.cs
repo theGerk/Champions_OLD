@@ -77,9 +77,9 @@ namespace Champions
 			{
 				BaseCost = 1;
 
-				Options = new Option[1];
+				Options = new Option[1] { new Option() };
 				Options[0].Type = Option.OptionType.Incremental;
-				Options[0].PointAlloc = new PointAllocation[1];
+				Options[0].PointAlloc = new PointAllocation[1] { new PointAllocation() };
 				Options[0].PointAlloc[0].Cost = 2;
 				Options[0].PointAlloc[0].CostApplication = PointAllocation.CostType.Additive;
 			}
