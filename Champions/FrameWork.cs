@@ -16,7 +16,7 @@ namespace Champions
 		/// </summary>
 		public class Rules
 		{
-			public IList<Component> Skills { get; set; }
+			public IList<Skill> Skills { get; set; }
 			public IList<Component> Perks { get; set; }
 			public IList<Component> Talents { get; set; }
 			public IList<Component> Powers { get; set; }
@@ -56,6 +56,36 @@ namespace Champions
 		}
 
 		/// <summary>
+		/// Class to describe a skill
+		/// </summary>
+		public class Skill:Component
+		{
+			/// <summary>
+			/// Types of skills
+			/// </summary>
+			public enum SkillType { Background, Combat, General, IntBased, DexBased, PreBased }
+
+			/// <summary>
+			/// What type of skill this is.
+			/// </summary>
+			public SkillType Type { get; set; }
+
+			/// <summary>
+			/// Constructor sets defaults for skills
+			/// </summary>
+			public Skill()
+			{
+				BaseCost = 1;
+
+				Options = new Option[1];
+				Options[0].Type = Option.OptionType.Incremental;
+				Options[0].PointAlloc = new PointAllocation[1];
+				Options[0].PointAlloc[0].Cost = 2;
+				Options[0].PointAlloc[0].CostApplication = PointAllocation.CostType.Additive;
+			}
+		}
+
+		/// <summary>
 		/// Class for power frameworks
 		/// </summary>
 		public class Framework:Component
@@ -66,10 +96,10 @@ namespace Champions
 		}
 
 		/// <summary>
-		/// Any part of a power or anything that gives you options on how many points to put in
+		/// Any part of a power or anything that gives you options on how many points to put in.
 		/// ex: Hunted would have 1 of these for how powerfull the hunter is, 1 for how often and so on... 
 		/// </summary>
-		public class Option:FrameworkBase
+		public class Option
 		{
 			/// <summary>
 			/// Setting		=> has discrete values that only one of which can be used.
@@ -93,7 +123,7 @@ namespace Champions
 		/// A single place where points can be put
 		/// ex: EB would have one with cost = 5, and CostApplication = Additive, for putting more points into the power.
 		/// </summary>
-		public class PointAllocation:FrameworkBase
+		public class PointAllocation
 		{
 			/// <summary>
 			/// The cost of one level or the overall cost if it's a pure setting

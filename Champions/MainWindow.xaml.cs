@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Champions
 {
@@ -22,7 +23,8 @@ namespace Champions
 	{
 		public MainWindow()
 		{
-			var RuleSet = Newtonsoft.Json.JsonConvert.DeserializeObject<Framework.Rules>(System.IO.File.ReadAllText("Rules.json"));
+			MessageBox.Show(Directory.GetCurrentDirectory());
+			var RuleSet = Newtonsoft.Json.JsonConvert.DeserializeObject<Framework.Rules>(File.ReadAllText("Rules.json"));
 			InitializeComponent();
 		}
 	}
