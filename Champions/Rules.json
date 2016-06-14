@@ -39,6 +39,48 @@
 			"Name": "Climbing",
 			"Explanation": "\tThis DEX-based Skill allows the character to climb unusually difficult walls, trees, and buildings, as long as there are handholds. Most characters can climb ordinary things (like ladders) without making a roll. A character with Climbing may successfully climb a difficult surface with a successful Skill Roll. The GM may allow the character to make a STR Roll as a complementary Skill Roll. The climbing speed varies according to the structure being climbed, but the base speed is 1\" (2 meters) per Phase.\n\tA climbing character’s OCV and DCV are reduced by half, and may be 0 if the character is in a really difficult position. An unsuccessful Climbing Roll usually means that the character cannot climb that area, but it can sometimes means a fall if the roll was spectacularly bad",
 			"Type": 4
+		},
+		{
+			"Name": "Combat Skill Levels",
+			"Explanation": "Not yet implemented",
+			"Type": 1,
+			"BaseCost": 0,
+			"Options": [
+				{
+					"Type": 1,
+					"PointAlloc": [
+						{
+							"Cost": 2,
+							"CostType": 1,
+							"Explanation": "+1 OCV to a single attack",
+							"Name": "Level 1"
+						},
+						{
+							"Cost": 3,
+							"CostType": 1,
+							"Explanation": "+1 OCV for any tight group of attacks (3 attacks ussualy)",
+							"Name": "Level 2"
+						},
+						{
+							"Cost": 5,
+							"CostType": 1,
+							"Explanation": "+1 OCV for a large group of attacks (all hand attacks or all ranged attacks)\nCan also be used as +1 DCV.",
+							"Name": "Level 3"
+						},
+						{
+							"Cost": 8,
+							"CostType": 1,
+							"Explanation": "+1 to OCV or DCV for all combat",
+							"Name": "Level 4"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "Combat Driving",
+			"Type": 4,
+			"Explanation": "\tThis DEX-based Skill enables a character to drive and control a ground or water vehicle in difficult situations. To use Combat Driving, the character must be familiar with the vehicle (see Transport Familiarity). A Combat Driving Skill Roll is used for driving during combat. The character does not need to make a Combat Driving roll while driving normally on the road, unless something unusual has happened, like the vehicle is being shot at.\n\tIn combat, this Skill allows the character to drive the vehicle up to its full DCV, making it much harder to hit (see Vehicles.)\n\tCharacters with this Skill are automatically familiar withone class of non-flying vehicles. Characters who want to be familiar with more than one class of vehicle should purchase Transport Familiarity"
 		}
 	]
 }

@@ -42,7 +42,7 @@ namespace Champions
 		/// <summary>
 		/// Class for powers, disads, skills and so on
 		/// </summary>
-		public class Component:FrameworkBase
+		public class Component : FrameworkBase
 		{
 			/// <summary>
 			/// the Base cost for anything (for example Public ID ony has a base cost of 10, and nothing else)
@@ -58,37 +58,64 @@ namespace Champions
 		/// <summary>
 		/// Class to describe a skill
 		/// </summary>
-		public class Skill:Component
+		public class Skill :  Component
 		{
 			/// <summary>
 			/// Types of skills
 			/// </summary>
-			public enum SkillType { Background, Combat, General, IntBased, DexBased, PreBased }
+			public enum SkillType { Background, Combat, General, IntBased, DexBased, PreBased, Other }
 
 			/// <summary>
 			/// What type of skill this is.
 			/// </summary>
-			public SkillType Type { get; set; }
-
-			/// <summary>
-			/// Constructor sets defaults for skills
-			/// </summary>
-			public Skill()
+			public SkillType Type
 			{
-				BaseCost = 1;
-
-				Options = new Option[1] { new Option() };
-				Options[0].Type = Option.OptionType.Incremental;
-				Options[0].PointAlloc = new PointAllocation[1] { new PointAllocation() };
-				Options[0].PointAlloc[0].Cost = 2;
-				Options[0].PointAlloc[0].CostApplication = PointAllocation.CostType.Additive;
+				get
+				{
+					return _type;
+				}
+				set
+				{
+					switch (value)
+					{
+						case SkillType.Combat:
+							break;
+						case SkillType.Background:
+						case SkillType.General:
+						case SkillType.IntBased:
+						case SkillType.DexBased:
+						case SkillType.PreBased:
+							//set non-special skills to normal settings for skill
+							BaseCost = 1;
+							Options = new Option[1]
+							{
+								new Option()
+								{
+									Type = Option.OptionType.Incremental,
+									PointAlloc = new PointAllocation[1]
+									{
+										new PointAllocation()
+										{
+											Cost = 2,
+											CostApplication = PointAllocation.CostType.Additive
+										}
+									}
+								}
+							};
+							break;
+						default:
+							throw new Exception(string.Format("{0} is not a valid Skill type.", value));
+					}
+				}
 			}
+			private SkillType _type;
+
 		}
 
 		/// <summary>
 		/// Class for power frameworks
 		/// </summary>
-		public class Framework:Component
+		public class Framework : Component
 		{
 			public enum FrameworkTypes { ElementalControl, Multipower, VariablePowerPool }
 
@@ -99,7 +126,7 @@ namespace Champions
 		/// Any part of a power or anything that gives you options on how many points to put in.
 		/// ex: Hunted would have 1 of these for how powerfull the hunter is, 1 for how often and so on... 
 		/// </summary>
-		public class Option
+		public class Option : FrameworkBase
 		{
 			/// <summary>
 			/// Setting		=> has discrete values that only one of which can be used.
@@ -123,7 +150,7 @@ namespace Champions
 		/// A single place where points can be put
 		/// ex: EB would have one with cost = 5, and CostApplication = Additive, for putting more points into the power.
 		/// </summary>
-		public class PointAllocation
+		public class PointAllocation : FrameworkBase
 		{
 			/// <summary>
 			/// The cost of one level or the overall cost if it's a pure setting
